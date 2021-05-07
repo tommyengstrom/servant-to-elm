@@ -45,7 +45,7 @@ instance HasElmEncoder Aeson.Value User where
 
 type UserAPI
   = "user" :> Get '[JSON] User
-  :<|> "user" :> ReqBody '[JSON] User :> PostNoContent '[JSON] NoContent
+  :<|> "user" :> ReqBody '[JSON] User :> PostNoContent
 
 definitionModules :: HashMap [Text] (Pretty.Doc ann)
 definitionModules =
